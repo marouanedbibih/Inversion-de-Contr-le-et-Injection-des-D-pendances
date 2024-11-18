@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define beans for Dao and Metier -->
+    <bean id="dao" class="org.marouanedbibih.dao.DaoImpl"/>
+    <bean id="dao2" class="org.marouanedbibih.dao.DaoImpl2"/>
+    <bean id="dao3" class="org.marouanedbibih.dao.DaoImpl3"/>
+    <bean id="metier" class="org.marouanedbibih.metier.MetierImpl">
+        <property name="dao" ref="dao"/>
+    </bean>
+
+</beans>
